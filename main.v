@@ -39,13 +39,9 @@ assign pr_key = data^key;
 
 sub_byte s0(pr_key,s_key0);
 
-//shift row
-
-shift_row sh0(s_key0,sh_key0);
-
 //mix column
 
-mix_col  m0(sh_key0,mx_key0);
+mix_col  m0(s_key0,mx_key0);
 
 //add round key operation
 
@@ -57,13 +53,9 @@ key_gen k0(key,mx_key0,32'h01000000,gen_key0,en_key0);
 
 sub_byte s1(en_key0,s_key1);
 
-//shift row
-
-shift_row sh1(s_key1,sh_key1);
-
 //mix column
 
-mix_col  m1(sh_key1,mx_key1);
+mix_col  m1(s_key1,mx_key1);
 
 //add round key operation
 
@@ -75,13 +67,9 @@ key_gen k1(gen_key0,mx_key1,32'h02000000,gen_key1,en_key1);
 
 sub_byte s2(en_key1,s_key2);
 
-//shift row
-
-shift_row sh2(s_key2,sh_key2);
-
 //mix column
 
-mix_col  m2(sh_key2,mx_key2);
+mix_col  m2(s_key2,mx_key2);
 
 //add round key operation
 
@@ -93,13 +81,9 @@ key_gen k2(gen_key1,mx_key2,32'h04000000,gen_key2,en_key2);
 
 sub_byte s3(en_key2,s_key3);
 
-//shift row
-
-shift_row sh3(s_key3,sh_key3);
-
 //mix column
 
-mix_col  m3(sh_key3,mx_key3);
+mix_col  m3(s_key3,mx_key3);
 
 //add round key operation
 
@@ -111,13 +95,9 @@ key_gen k3(gen_key2,mx_key3,32'h08000000,gen_key3,en_key3);
 
 sub_byte s4(en_key3,s_key4);
 
-//shift row
-
-shift_row sh4(s_key4,sh_key4);
-
 //mix column
 
-mix_col  m4(sh_key4,mx_key4);
+mix_col  m4(s_key4,mx_key4);
 
 //add round key operation
 
@@ -129,13 +109,9 @@ key_gen k4(gen_key3,mx_key4,32'h10000000,gen_key4,en_key4);
 
 sub_byte s5(en_key4,s_key5);
 
-//shift row
-
-shift_row sh5(s_key5,sh_key5);
-
 //mix column
 
-mix_col  m5(sh_key5,mx_key5);
+mix_col  m5(s_key5,mx_key5);
 
 //add round key operation
 
@@ -147,13 +123,9 @@ key_gen k5(gen_key4,mx_key5,32'h20000000,gen_key5,en_key5);
 
 sub_byte s6(en_key5,s_key6);
 
-//shift row
-
-shift_row sh6(s_key6,sh_key6);
-
 //mix column
 
-mix_col  m6(sh_key6,mx_key6);
+mix_col  m6(s_key6,mx_key6);
 
 //add round key operation
 
@@ -165,13 +137,9 @@ key_gen k6(gen_key5,mx_key6,32'h40000000,gen_key6,en_key6);
 
 sub_byte s7(en_key6,s_key7);
 
-//shift row
-
-shift_row sh7(s_key7,sh_key7);
-
 //mix column
 
-mix_col  m7(sh_key7,mx_key7);
+mix_col  m7(s_key7,mx_key7);
 
 //add round key operation
 
@@ -183,13 +151,9 @@ key_gen k7(gen_key6,mx_key7,32'h80000000,gen_key7,en_key7);
 
 sub_byte s8(en_key7,s_key8);
 
-//shift row
-
-shift_row sh8(s_key8,sh_key8);
-
 //mix column
 
-mix_col  m8(sh_key8,mx_key8);
+mix_col  m8(s_key8,mx_key8);
 
 //add round key operation
 
